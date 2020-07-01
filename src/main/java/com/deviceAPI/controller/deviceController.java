@@ -1,6 +1,6 @@
 package com.deviceAPI.controller;
 
-import com.deviceAPI.model.Device;
+import com.deviceAPI.model.DeviceDD;
 import com.deviceAPI.repo.IDeviceRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -21,7 +21,7 @@ public class deviceController {
     }
 
     @GetMapping("/devices")
-    public List<Device> getDevices(){
+    public List<DeviceDD> getDevices(){
         return repo.findAll();
     }
 }
